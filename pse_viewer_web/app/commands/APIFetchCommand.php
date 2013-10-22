@@ -37,8 +37,8 @@ class APIFetchCommand extends Command {
 	 */
 	public function fire()
 	{
-		$this->info("Saving some data to database...");
-		StockDatabase::insertSampleStock();
+		$this->info("Saving stocks to database...");
+		StockDatabase::updateStockHistory();
 	}
 
 	/**
