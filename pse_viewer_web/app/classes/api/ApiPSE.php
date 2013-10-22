@@ -10,6 +10,11 @@ class ApiPSE {
         return $objXML;
     }
 
+    public static function getByCode($code) {
+        $urlByCode = "http://phisix-api.appspot.com/stocks/" . $code . ".xml";
+        $objXML = simplexml_load_file($urlByCode);
+        return $objXML;
+    }
 }
 
 ?>
