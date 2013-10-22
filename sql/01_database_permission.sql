@@ -1,0 +1,1 @@
+GRANT ALL ON pse_viewer.* TO 'pse_viewer'@'localhost' IDENTIFIED BY 'pse_viewer';
