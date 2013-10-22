@@ -34,6 +34,21 @@ class StockDatabase {
             );
         }
     }
+
+    public static function selectHistoryAll() {
+        $rs = DB::table('stock_history')->get();
+        return $rs;
+    }
+
+    public static function selectHistoryByCode($code) {
+        $codeUpr = strtoupper($code);
+        $rs = DB::table('stock_history')
+                ->where('symbol', $codeUpr)
+                ->orderBy('as_of','asc')
+                ->get();
+        return $rs;
+    }
+
 }
 
 ?>
