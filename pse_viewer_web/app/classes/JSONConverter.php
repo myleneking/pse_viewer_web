@@ -11,8 +11,12 @@ class JSONConverter {
         }
 
         $content = implode(",", $content_array);
-        $result = '{"stock":['.$content.']}';
+        
+        if (empty($content)) {
+            return false;
+        }
 
+        $result = '{"stock":['.$content.']}';;
         return $result;
     }
 }

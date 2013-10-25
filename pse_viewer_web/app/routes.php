@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-
-Route::get('stock/history.json', 'XMLController@loadHistoryAllJSON');
-Route::get('stock/history/{code}.json', 'XMLController@loadHistoryByCodeJSON');
+Route::get('stock/history.json', 'JSONController@loadHistoryAllJSON');
+Route::get('stock/history/{code}.json', 'JSONController@loadHistoryByCodeJSON');
+Route::get('stock/history/{period}/{code}.json', 'JSONController@loadHistoryByPeriodByCodeJSON');

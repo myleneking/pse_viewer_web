@@ -4,7 +4,9 @@ CREATE TABLE stock_history (
     symbol          VARCHAR(10) NOT NULL ,
     percent_change  INT         NOT NULL ,
     volume          INT         NOT NULL ,
-    price           INT         NOT NULL ,
+    currency        VARCHAR(5)  NOT NULL ,
+    amount          INT         NOT NULL ,
     as_of           DATETIME    NOT NULL ,
+    created_at      TIMESTAMP   NOT NULL ,
     PRIMARY KEY (`id`)
 );
