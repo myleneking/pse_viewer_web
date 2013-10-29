@@ -47,8 +47,11 @@ class JSONController extends BaseController {
 
         $json = JSONConverter::objectToJSON($rs);
 
-        return $json;
+        if ($json) {
+            return $json;
+        }
 
+        return 'No available data yet for "' . $code . '".';
     }
 
 }
