@@ -1,0 +1,2 @@
+# Collect data every 30 minutes from 9AM to 5PM.
+*/30 9-17 * * * /Applications/MAMP/bin/php/php5.4.10/bin/php /Users/winas/Documents/workspace-php/pse_viewer_web/pse_viewer_web/artisan api:fetch
